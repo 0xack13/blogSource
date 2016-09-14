@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hugo Cactus Theme</title>
+    <title>Posts on 0xack13</title>
     <link>https://0xack13.github.io/post/</link>
-    <description>Recent content in Posts on Hugo Cactus Theme</description>
+    <description>Recent content in Posts on 0xack13</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jul 2016 23:24:14 +0400</lastBuildDate>
@@ -74,6 +74,8 @@ NoMethodError: undefined method `oTest&#39; for #&amp;lt;Object:0x007fb84a3ff110
 from (pry):114:in `__pry__&#39;
 [67] pry(main)&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Passing a code block into such siutation is very beneficial. A prominent example is that when we need to make dynamic calls&lt;/p&gt;
 </description>
     </item>
     
