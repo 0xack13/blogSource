@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on 0xack13</title>
+    <link>https://0xack13.github.io/tags/development/</link>
+    <description>Recent content in Development on 0xack13</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jul 2016 23:24:14 +0400</lastBuildDate>
+    <atom:link href="https://0xack13.github.io/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Thoughts on Ruby syntax</title>
+      <link>https://0xack13.github.io/post/myfirstpost/</link>
+      <pubDate>Wed, 20 Jul 2016 23:24:14 +0400</pubDate>
+      
+      <guid>https://0xack13.github.io/post/myfirstpost/</guid>
+      <description>&lt;p&gt;With ruby metaprogramming, many doors are really open to extend your code. I will start by giving practical examples on how you can use classes, modules, methods and many other related topics.&lt;/p&gt;
+
+&lt;p&gt;In the beginning, let&amp;rsquo;s start by defining a class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Base
+    # this method will be associated with any &amp;quot;instance&amp;quot; object of the &amp;quot;Base&amp;quot; class
+    def writeSomeCode
+        puts &amp;quot;Hello, I&#39;m writing some code!&amp;quot;
+    end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example, let&amp;rsquo;s try do the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;[3] pry(main)&amp;gt; Base.writeSomeCode
+NoMethodError: undefined method &#39;writeSomeCode&#39; for Base:Class
+from (pry):7:in &#39;__pry__&#39;
+
+[6] pry(main)&amp;gt; b.writeSomeCode
+Hello, I&#39;m writing somec ode!
+=&amp;gt; nil
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s obvious, we can&amp;rsquo;t call the method directly as it belongs to in the instance of the &amp;ldquo;Base&amp;rdquo; class. However, we can reference the &lt;code&gt;self&lt;/code&gt; keyword:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Base
+    class &amp;lt;&amp;lt; self # Can also be written as: class &amp;lt;&amp;lt; Base
+        def writeSomeCode
+            puts &amp;quot;Hello, I&#39;m writing some code!&amp;quot;
+        end
+    end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s can be simlpy considered as Class Method definition where these methods are tied to the class itself. In another scenario, we might need to limit the method access to certain instance.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;[60] pry(main)&amp;gt; o = Object.new
+=&amp;gt; #&amp;lt;Object:0x007fb8499a8d60&amp;gt;
+[61] pry(main)&amp;gt; class &amp;lt;&amp;lt; o
+[61] pry(main)*   def oTest
+[61] pry(main)*     puts &amp;quot;oTest print!&amp;quot;
+[61] pry(main)*   end  
+[61] pry(main)* end  
+=&amp;gt; nil
+[62] pry(main)&amp;gt; o.class
+=&amp;gt; Object
+[63] pry(main)&amp;gt; o.o
+o.oTest      o.object_id  
+[63] pry(main)&amp;gt; o.oTest
+oTest print!
+=&amp;gt; nil
+[65] pry(main)&amp;gt; oo = Object.new
+=&amp;gt; #&amp;lt;Object:0x007fb84a3ff110&amp;gt;
+[66] pry(main)&amp;gt; oo.oTest
+NoMethodError: undefined method `oTest&#39; for #&amp;lt;Object:0x007fb84a3ff110&amp;gt;
+from (pry):114:in `__pry__&#39;
+[67] pry(main)&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Passing a code block into such siutation is very beneficial. A prominent example is that when we need to make dynamic calls&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
