@@ -1,7 +1,7 @@
 # Site settings
 baseurl = "https://0xack13.github.io/"
 languageCode = "en-us"
-title = "Hugo Cactus Theme"
+title = "0xack13"
 theme = "hugo-cactus-theme"
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""

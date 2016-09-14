@@ -2,6 +2,7 @@
 date = "2016-07-20T23:24:14+04:00"
 draft = true
 title = "Thoughts on Ruby syntax"
+tags = [ "Development", "Ruby" ]
 
 +++
 
@@ -45,7 +46,6 @@ end
 
 That's can be simlpy considered as Class Method definition where these methods are tied to the class itself. In another scenario, we might need to limit the method access to certain instance.
 
-
 ``` ruby 
 [60] pry(main)> o = Object.new
 => #<Object:0x007fb8499a8d60>
@@ -69,3 +69,5 @@ NoMethodError: undefined method `oTest' for #<Object:0x007fb84a3ff110>
 from (pry):114:in `__pry__'
 [67] pry(main)> 
 ```
+
+Passing a code block into such siutation is very beneficial. A prominent example is that when we need to make dynamic calls
