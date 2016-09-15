@@ -4,14 +4,14 @@ languageCode = "en-us"
 title = "0xack13"
 theme = "hugo-cactus-theme"
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
+googleAnalytics = "UA-84206938-1"
 # Disable comments by leaving disqusShortname empty
 disqusShortname = ""
 
 [params]
     name = "0xak13"
-    description = "Describe your website"
-    bio = "Rambling thoughts"
+    description = "Rambling thoughts on a short technical journey"
+    bio = "Rambling thoughts on a short technical journey."
     # Enter optionally your twitter account
     #twitter = "Your Twitter account"
     enableRSS = true
