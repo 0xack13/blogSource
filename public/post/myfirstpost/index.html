@@ -117,7 +117,19 @@ from (pry):114:in `__pry__'
 [67] pry(main)&gt; 
 </code></pre>
 
-<p>Passing a code block into such siutation is very beneficial. A prominent example is that when we need to make dynamic calls</p>
+<p>&lsquo;respond_to&rsquo; method is another handy feature that we can use to test if the object contains certain method.</p>
+
+<pre><code class="language-ruby">[8] pry(main)&gt; &quot;test&quot;.class
+=&gt; String
+[9] pry(main)&gt; &quot;test&quot;.reverse
+=&gt; &quot;tset&quot;
+[10] pry(main)&gt; &quot;test&quot;.respond_to
+.respond_to?          .respond_to_missing?  
+[10] pry(main)&gt; &quot;test&quot;.respond_to?('reverse')
+=&gt; true
+[12] pry(main)&gt; &quot;test&quot;.respond_to?(:reverse)
+=&gt; true
+</code></pre>
 
                 </section>
             </article>

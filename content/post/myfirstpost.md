@@ -70,4 +70,19 @@ from (pry):114:in `__pry__'
 [67] pry(main)> 
 ```
 
-Passing a code block into such siutation is very beneficial. A prominent example is that when we need to make dynamic calls
+'respond_to?' method is another handy feature that we can use to test if the object contains certain method. The question mark in the end of the method indicates a "boolean" return value.
+
+``` ruby
+[8] pry(main)> "test".class
+=> String
+[9] pry(main)> "test".reverse
+=> "tset"
+[10] pry(main)> "test".respond_to
+.respond_to?          .respond_to_missing?  
+[10] pry(main)> "test".respond_to?('reverse')
+=> true
+[12] pry(main)> "test".respond_to?(:reverse)
+=> true
+```
+
+
