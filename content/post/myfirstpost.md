@@ -70,7 +70,7 @@ from (pry):114:in `__pry__'
 [67] pry(main)> 
 ```
 
-'respond_to?' method is another handy feature that we can use to test if the object contains certain method. The question mark in the end of the method indicates a "boolean" return value.
+**respond_to?** method is another handy feature that we can use to test if the object contains certain method. The question mark in the end of the method indicates a "boolean" return value.
 
 ``` ruby
 [8] pry(main)> "test".class
