@@ -75,7 +75,7 @@ from (pry):114:in `__pry__&#39;
 [67] pry(main)&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&amp;lsquo;respond_to?&amp;rsquo; method is another handy feature that we can use to test if the object contains certain method. The question mark in the end of the method indicates a &amp;ldquo;boolean&amp;rdquo; return value.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;respond_to?&lt;/strong&gt; method is another handy feature that we can use to test if the object contains certain method. The question mark in the end of the method indicates a &amp;ldquo;boolean&amp;rdquo; return value.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;[8] pry(main)&amp;gt; &amp;quot;test&amp;quot;.class
 =&amp;gt; String
